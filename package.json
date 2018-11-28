@@ -1,0 +1,50 @@
+{
+  "name": "nextjs-redux-seed",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"TODO: Test will run with jest\" && cross-env NODE_ENV=test jest",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "analyze": "cross-env ANALYZE=1 next build",
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-less": "^0.3.0",
+    "cross-env": "^5.0.1",
+    "express": "^4.15.2",
+    "jss": "latest",
+    "less": "^3.0.4",
+    "material-ui": "next",
+    "next": "^6.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-jss": "latest",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.1.0",
+    "webpack-bundle-analyzer": "^2.8.3"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.4.6",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^18.0.0",
+    "babel-preset-es2015": "^6.22.0",
+    "enzyme": "^2.9.1",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-cli": "^18.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.3.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  }
+}
