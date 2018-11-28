@@ -1,4 +1,4 @@
-# nextjs-redux-seed
+# react-nextjs-seed
 Seed for NextJS with Redux
 
 #### Preparation

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Button from 'material-ui/Button'
-import { withStyles } from 'material-ui/styles'
+import Button from '@material-ui/core/Button'
+import { withStyles } from '@material-ui/core/styles'
 
 const linkStyle = {
   marginRight: 15,
@@ -30,7 +30,7 @@ const Header = (props) => (
       <a style={linkStyle}>TODO App</a>
     </Link>
     <Link href="/">
-      <Button size="small" variant="raised" color="primary" className={props.classes.loginBtn}>
+      <Button size="small" variant="contained" color="primary" className={props.classes.loginBtn}>
         Log In
       </Button>
     </Link>
