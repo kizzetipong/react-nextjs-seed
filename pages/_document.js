@@ -8,12 +8,22 @@ class MyDocument extends Document {
   render() {
     const { pageContext } = this.props
 
+      const hotjarScript = '';
+        // `(function(h,o,t,j,a,r){
+        //   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        //   h._hjSettings={hjid:920821,hjsv:6};
+        //   a=o.getElementsByTagName('head')[0];
+        //   r=o.createElement('script');r.async=1;
+        //   r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        //   a.appendChild(r);
+        // })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
+
     return (
       <html lang="en" dir="ltr">
         <Head>
           <base href="/" />
-          <meta name="Title" content=" Seed for NextJS with Redux " />
-          <title>Next-Redux-Seed</title>
+          <meta name="Title" content=" React -NextJS " />
+          <title>React -NextJS</title>
           <meta charSet="utf-8" />
           {/* Use minimum-scale=1 to enable GPU rasterization */}
           <meta
@@ -26,7 +36,10 @@ class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit" />
           <link rel="stylesheet" href="/_next/static/style.css" />
+          { process.env.NODE_ENV !== 'development' ? <script dangerouslySetInnerHTML={{__html: hotjarScript}} /> : ''}
         </Head>
         <body>
           <Main />
@@ -38,7 +51,8 @@ class MyDocument extends Document {
             src:url("/static/fonts/supermarket.ttf") format("truetype");
           }
           body {
-            font-family: "Supermarket", "Roboto", "Helvetica", "Arial", sans-serif;
+            margin: 0;
+            font-family: "Roboto", "Kanit", "Helvetica", "Arial", sans-serif;
           }
         `}</style>
       </html>

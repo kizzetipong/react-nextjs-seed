@@ -1,6 +1,4 @@
 import React from 'react'
-import Layout from '../layouts/main.js'
-import withRoot from '../src/withRoot'
 
 class Index extends React.Component {
   constructor (props) {
@@ -12,10 +10,10 @@ class Index extends React.Component {
   }
   render () {
     return (
-      <Layout>
-      </Layout>
+      <div className='homepage'>
+      </div>
     )
   }
 }
 
-export default withRoot(Index)
+export default Index
