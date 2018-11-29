@@ -10,6 +10,7 @@ import green from '@material-ui/core/colors/green';
 const theme = createMuiTheme({
   typography: {
     fontFamily: '"Supermarket", "Roboto", "Helvetica", "Arial", sans-serif',
+    useNextVariants: true,
   },
   palette: {
     primary: {
@@ -21,6 +22,21 @@ const theme = createMuiTheme({
       light: green[300],
       main: green[500],
       dark: green[700],
+    },
+  },
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: 'none',
+        '@media screen and (max-width: 599px)': {
+          minWidth: 60,
+          padding: '4px 8px',
+        },
+        '@media screen and (min-width: 600px) and (max-width: 959px)': {
+          minWidth: 72,
+          padding: '4px 8px',
+        },
+      },
     },
   },
 });

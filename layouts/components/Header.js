@@ -1,6 +1,8 @@
+import  { Component } from 'react'
 import Link from 'next/link'
-import Button from '@material-ui/core/Button'
+import IconButton from '@material-ui/core/IconButton'
 import { withStyles } from '@material-ui/core/styles'
+import { Person as PersonIcon } from '@material-ui/icons'
 
 const linkStyle = {
   marginRight: 15,
@@ -10,31 +12,42 @@ const styles = theme => ({
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 20,
   },
-  loginBtn: {
-    float: 'right',
-  },
   headerContainer: {
     margin: '2px 5px 0 5px',
   },
 });
 
-const Header = (props) => (
-  <div className={props.classes.headerContainer}>
-    <Link href="/">
-      <a style={linkStyle}>Home</a>
-    </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
-    <Link href="/todo">
-      <a style={linkStyle}>TODO App</a>
-    </Link>
-    <Link href="/">
-      <Button size="small" variant="contained" color="primary" className={props.classes.loginBtn}>
-        Log In
-      </Button>
-    </Link>
-  </div>
-)
+class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+  }
+
+  render () {
+    const { classes } = this.props;
+    return (
+      <div className={classes.headerContainer}>
+        <Link href="/">
+          <a style={linkStyle}>Home</a>
+        </Link>
+        <Link href="/about">
+          <a style={linkStyle}>About</a>
+        </Link>
+        <Link href="/todo">
+          <a style={linkStyle}>TODO</a>
+        </Link>
+        <Link href="/">
+          <IconButton
+            color='inherit'
+            aria-label='Sign in / Sign up'
+          >
+            <PersonIcon />
+          </IconButton>
+        </Link>
+      </div>
+    );
+  }
+}
 
 export default (withStyles(styles)(Header))
