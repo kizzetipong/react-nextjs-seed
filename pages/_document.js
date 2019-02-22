@@ -38,7 +38,6 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit" />
-          <link rel="stylesheet" href="/_next/static/style.css" />
           { process.env.NODE_ENV !== 'development' ? <script dangerouslySetInnerHTML={{__html: hotjarScript}} /> : ''}
         </Head>
         <body>
