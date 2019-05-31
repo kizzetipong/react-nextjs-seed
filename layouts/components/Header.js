@@ -1,6 +1,6 @@
 import  { Component } from 'react'
 import Link from 'next/link'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/styles'
 
 const linkStyle = {
   marginRight: 15,
@@ -8,7 +8,7 @@ const linkStyle = {
 const styles = theme => ({
   root: {
     textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
+    paddingTop: theme.spacing(20),
   },
   headerContainer: {
     margin: '2px 5px 0 5px',

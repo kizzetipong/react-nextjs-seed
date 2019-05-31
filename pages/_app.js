@@ -3,7 +3,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import Layout from '../layouts/main.js'
 import { getStore } from '../modules/redux-config'
-import withRoot from '../src/withRoot'
+import withRoot from '../utils/withRoot'
 
 class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {
