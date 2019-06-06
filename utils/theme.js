@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import grey from '@material-ui/core/colors/grey';
-import yellow from '@material-ui/core/colors/yellow';
+import indigo from '@material-ui/core/colors/indigo';
+import amber from '@material-ui/core/colors/amber';
 
 const theme = responsiveFontSizes(createMuiTheme({
   typography: {
@@ -10,14 +10,14 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
   palette: {
     primary: {
-      light: '#ffdc90',
-      main: '#ffb71a',
-      dark: yellow[700],
+      light: indigo[300],
+      main: indigo[500],
+      dark: indigo[700],
     },
     secondary: {
-      light: grey[300],
-      main: grey[500],
-      dark: grey[700],
+      light: amber[300],
+      main: amber[500],
+      dark: amber[700],
     },
 
   },

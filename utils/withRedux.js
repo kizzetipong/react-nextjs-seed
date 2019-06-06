@@ -50,7 +50,7 @@ export default (...args) => (Component) => {
     return {
       store,
       initialState: store.getState(),
-      initialProps
+      initialProps,
     }
   }
 
