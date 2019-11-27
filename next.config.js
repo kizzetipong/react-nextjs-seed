@@ -1,9 +1,8 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const withLess = require('@zeit/next-less')
 
 const { ANALYZE } = process.env
 
-module.exports = withLess({
+module.exports = {
   webpack: function (config) {
     if (ANALYZE) {
       config.plugins.push(new BundleAnalyzerPlugin({
@@ -15,4 +14,4 @@ module.exports = withLess({
 
     return config
   },
-})
+}

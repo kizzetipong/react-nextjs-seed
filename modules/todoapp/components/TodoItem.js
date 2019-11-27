@@ -1,5 +1,4 @@
 import { Button } from '@material-ui/core';
-import './TodoItem.less'
 
 export default function TodoItem ({ todo, removeTodo }) {
   return (

@@ -18,9 +18,7 @@
     "@material-ui/core": "4.0.1",
     "@material-ui/icons": "4.0.1",
     "@material-ui/styles": "4.0.1",
-    "@zeit/next-less": "^1.0.1",
     "express": "^4.16.4",
-    "less": "^3.9.0",
     "next": "^8.1.0",
     "next-routes": "^1.4.2",
     "react": "^16.8.4",
@@ -32,23 +30,21 @@
     "webpack-bundle-analyzer": "^3.3.2"
   },
   "devDependencies": {
-    "@babel/core": "7.2.2",
-    "@babel/preset-env": "^7.0.0",
-    "@storybook/addon-viewport": "^3.4.10",
-    "@storybook/react": "^3.4.10",
-    "babel-core": "^7.0.0-bridge.0",
+    "@babel/core": "7.3.4",
+    "@storybook/addon-actions": "5.1.9",
+    "@storybook/addon-links": "5.1.9",
+    "@storybook/addons": "5.1.9",
+    "@storybook/react": "5.1.9",
     "babel-eslint": "^9.0.0",
-    "babel-jest": "^23.4.2",
+    "babel-jest": "24.1.0",
+    "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
-    "enzyme": "^2.9.1",
-    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "jest-cli": "^18.0.0",
-    "react-addons-test-utils": "^15.6.2",
-    "react-test-renderer": "^16.4.2"
+    "jest": "24.1.0",
+    "react-testing-library": "^5.4.2"
   }
 }
