@@ -1,4 +1,4 @@
-import App, {Container} from 'next/app'
+import App from 'next/app'
 import React from 'react'
 import { Provider } from 'react-redux'
 import Layout from '../layouts/main.js'
@@ -20,13 +20,11 @@ class MyApp extends App {
   render () {
     const {Component, pageProps, pathname} = this.props
     return (
-      <Container>
-        <Provider store={ getStore() }>
-          <Layout pathname={pathname}>
-            <Component {...pageProps} />
-          </Layout>
-        </Provider>
-      </Container>
+      <Provider store={ getStore() }>
+        <Layout pathname={pathname}>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
     )
   }
 }
