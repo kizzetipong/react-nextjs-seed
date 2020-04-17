@@ -6,24 +6,6 @@ import theme from '../utils/theme';
 
 class MyDocument extends Document {
   render() {
-    const hotjarScript =
-      `(function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:920821,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`
-
-    const GAScript = 
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-133408799-1');`
-
-
     return (
       <html lang="en" dir="ltr">
         <Head>
@@ -43,29 +25,11 @@ class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit" />
-          { process.env.NODE_ENV !== 'development' ?
-            <Fragment>
-              <script dangerouslySetInnerHTML={{__html: hotjarScript}} />
-              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133408799-1"></script>
-              <script dangerouslySetInnerHTML={{__html: GAScript}} />
-            </Fragment>
-            : ''
-          }
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-        <style jsx global>{`
-          @font-face {
-            font-family: 'Supermarket';
-            src:url("/static/fonts/supermarket.ttf") format("truetype");
-          }
-          body {
-            margin: 0;
-            font-family: "Roboto", "Kanit", "Helvetica", "Arial", sans-serif;
-          }
-        `}</style>
       </html>
     )
   }
